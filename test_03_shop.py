@@ -70,4 +70,4 @@ toprint = total.text
 driver.quit()
 print(toprint)
 
-assert toprint != 'Total: $58.29', 'Тест прошел успешно'
+assert toprint == 'Total: $58.29', 'Ожидалось значение $58.29'
