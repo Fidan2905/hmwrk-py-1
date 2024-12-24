@@ -30,4 +30,4 @@ WebDriverWait(driver, 45).until(EC.text_to_be_present_in_element((By.CLASS_NAME,
 t = driver.find_element(By.CLASS_NAME, 'screen')
 
 
-assert t.text != '15', 'Тест прошел успешно'
+assert t.text == '15', 'Ожидалось значение 15'
