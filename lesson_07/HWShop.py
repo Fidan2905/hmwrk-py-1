@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from Pages.InventoryPageShop import InventoryPageShop
 from Pages.CartPageShop import CartPageShop
-from Pages.CheckoutPageShop import CheckoutPageShop
+from Pages.CheckOutPageShop import CheckOutPageShop
 from Pages.CheckOutPageShop import OverviewPageShop
 from Pages.MainPageShop import MainPageShop
 
