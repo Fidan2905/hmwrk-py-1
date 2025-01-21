@@ -2,8 +2,6 @@ import requests
 import pytest
 
 
-login
-
 BASE_URL = "https://ru.yougile.com/api-v2"
 
 PROJECT_DATA = {
@@ -42,7 +40,7 @@ def test_update_project():
     }
 
     response = requests.put(f"{BASE_URL}/projects/{project_id}", json=update_data, headers=HEADERS)
-    assert response.status_code == 200  #
+    assert response.status_code == 200 
     assert response.json()['name'] == "Updated Project"
 
 
