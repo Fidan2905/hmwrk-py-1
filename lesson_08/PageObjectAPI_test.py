@@ -2,19 +2,25 @@ import requests
 import pytest
 
 
+login = "fidanmahmudova2905@gmail.com"
+
+# URL API
 BASE_URL = "https://ru.yougile.com/api-v2"
 
+# Тестовые данные
 PROJECT_DATA = {
     "name": "Test Project",
     "description": "This is a test project."
 }
 
 INVALID_PROJECT_DATA = {
-    "name": "",
+    "name": "",  # Поле обязательно
     "description": "This should fail due to missing name."
 }
 
+# Аутентификация (если требуется, добавьте ваш токен или необходимый заголовок)
 HEADERS = {
+    'Authorization': 'ZaTRqRUoW8oCnHHY4NJm+LSzQw79ii68fS9N2pn9e0Y49Oc54WRHtQn4nIJrM0Ej', # Раскомментируйте и добавьте ваш токен
     'Content-Type': 'application/json'
 }
 
@@ -40,7 +46,7 @@ def test_update_project():
     }
 
     response = requests.put(f"{BASE_URL}/projects/{project_id}", json=update_data, headers=HEADERS)
-    assert response.status_code == 200 
+    assert response.status_code == 200  #
     assert response.json()['name'] == "Updated Project"
 
 
